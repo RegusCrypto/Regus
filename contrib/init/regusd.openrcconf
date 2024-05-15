@@ -1,0 +1,33 @@
+# /etc/conf.d/regusd: config file for /etc/init.d/regusd
+
+# Config file location
+#REGUSD_CONFIGFILE="/etc/regus/regus.conf"
+
+# What directory to write pidfile to?  (created and owned by $REGUSD_USER)
+#REGUSD_PIDDIR="/var/run/regusd"
+
+# What filename to give the pidfile
+#REGUSD_PIDFILE="${REGUSD_PIDDIR}/regusd.pid"
+
+# Where to write regusd data (be mindful that the blockchain is large)
+#REGUSD_DATADIR="/var/lib/regusd"
+
+# User and group to own regusd process
+#REGUSD_USER="regus"
+#REGUSD_GROUP="regus"
+
+# Path to regusd executable
+#REGUSD_BIN="/usr/bin/regusd"
+
+# Nice value to run regusd under
+#REGUSD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#REGUSD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for regusd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+REGUSD_SIGTERM_TIMEOUT=600

@@ -1,0 +1,439 @@
+# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2023-2024 The Regus Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+bin_PROGRAMS += qt/regus-qt
+
+if BUILD_REGUS_GUI
+  bin_PROGRAMS += regus-gui
+endif
+
+EXTRA_LIBRARIES += qt/libregusqt.a
+
+# regus qt core #
+include Makefile.qt_locale.include
+
+QT_FORMS_UI = \
+  qt/forms/addressbookpage.ui \
+  qt/forms/askpassphrasedialog.ui \
+  qt/forms/coincontroldialog.ui \
+  qt/forms/createwalletdialog.ui \
+  qt/forms/editaddressdialog.ui \
+  qt/forms/helpmessagedialog.ui \
+  qt/forms/intro.ui \
+  qt/forms/modaloverlay.ui \
+  qt/forms/openuridialog.ui \
+  qt/forms/optionsdialog.ui \
+  qt/forms/overviewpage.ui \
+  qt/forms/psbtoperationsdialog.ui \
+  qt/forms/receivecoinsdialog.ui \
+  qt/forms/receiverequestdialog.ui \
+  qt/forms/debugwindow.ui \
+  qt/forms/sendcoinsdialog.ui \
+  qt/forms/sendcoinsentry.ui \
+  qt/forms/signverifymessagedialog.ui \
+  qt/forms/transactiondescdialog.ui
+
+QT_MOC_CPP = \
+  qt/moc_addressbookpage.cpp \
+  qt/moc_addresstablemodel.cpp \
+  qt/moc_askpassphrasedialog.cpp \
+  qt/moc_createwalletdialog.cpp \
+  qt/moc_bantablemodel.cpp \
+  qt/moc_regus.cpp \
+  qt/moc_regusaddressvalidator.cpp \
+  qt/moc_regusamountfield.cpp \
+  qt/moc_regusgui.cpp \
+  qt/moc_regusunits.cpp \
+  qt/moc_clientmodel.cpp \
+  qt/moc_coincontroldialog.cpp \
+  qt/moc_coincontroltreewidget.cpp \
+  qt/moc_csvmodelwriter.cpp \
+  qt/moc_editaddressdialog.cpp \
+  qt/moc_guiutil.cpp \
+  qt/moc_initexecutor.cpp \
+  qt/moc_intro.cpp \
+  qt/moc_macdockiconhandler.cpp \
+  qt/moc_macnotificationhandler.cpp \
+  qt/moc_modaloverlay.cpp \
+  qt/moc_notificator.cpp \
+  qt/moc_openuridialog.cpp \
+  qt/moc_optionsdialog.cpp \
+  qt/moc_optionsmodel.cpp \
+  qt/moc_overviewpage.cpp \
+  qt/moc_peertablemodel.cpp \
+  qt/moc_peertablesortproxy.cpp \
+  qt/moc_paymentserver.cpp \
+  qt/moc_psbtoperationsdialog.cpp \
+  qt/moc_qrimagewidget.cpp \
+  qt/moc_qvalidatedlineedit.cpp \
+  qt/moc_qvaluecombobox.cpp \
+  qt/moc_receivecoinsdialog.cpp \
+  qt/moc_receiverequestdialog.cpp \
+  qt/moc_recentrequeststablemodel.cpp \
+  qt/moc_rpcconsole.cpp \
+  qt/moc_sendcoinsdialog.cpp \
+  qt/moc_sendcoinsentry.cpp \
+  qt/moc_signverifymessagedialog.cpp \
+  qt/moc_splashscreen.cpp \
+  qt/moc_trafficgraphwidget.cpp \
+  qt/moc_transactiondesc.cpp \
+  qt/moc_transactiondescdialog.cpp \
+  qt/moc_transactionfilterproxy.cpp \
+  qt/moc_transactionoverviewwidget.cpp \
+  qt/moc_transactiontablemodel.cpp \
+  qt/moc_transactionview.cpp \
+  qt/moc_utilitydialog.cpp \
+  qt/moc_walletcontroller.cpp \
+  qt/moc_walletframe.cpp \
+  qt/moc_walletmodel.cpp \
+  qt/moc_walletview.cpp
+
+REGUS_MM = \
+  qt/macdockiconhandler.mm \
+  qt/macnotificationhandler.mm \
+  qt/macos_appnap.mm
+
+QT_MOC = \
+  qt/regusamountfield.moc \
+  qt/intro.moc \
+  qt/overviewpage.moc \
+  qt/rpcconsole.moc
+
+QT_QRC_CPP = qt/qrc_regus.cpp
+QT_QRC = qt/regus.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_regus_locale.cpp
+QT_QRC_LOCALE = qt/regus_locale.qrc
+
+REGUS_QT_H = \
+  qt/addressbookpage.h \
+  qt/addresstablemodel.h \
+  qt/askpassphrasedialog.h \
+  qt/bantablemodel.h \
+  qt/regus.h \
+  qt/regusaddressvalidator.h \
+  qt/regusamountfield.h \
+  qt/regusgui.h \
+  qt/regusunits.h \
+  qt/clientmodel.h \
+  qt/coincontroldialog.h \
+  qt/coincontroltreewidget.h \
+  qt/createwalletdialog.h \
+  qt/csvmodelwriter.h \
+  qt/editaddressdialog.h \
+  qt/guiconstants.h \
+  qt/guiutil.h \
+  qt/initexecutor.h \
+  qt/intro.h \
+  qt/macdockiconhandler.h \
+  qt/macnotificationhandler.h \
+  qt/macos_appnap.h \
+  qt/modaloverlay.h \
+  qt/networkstyle.h \
+  qt/notificator.h \
+  qt/openuridialog.h \
+  qt/optionsdialog.h \
+  qt/optionsmodel.h \
+  qt/overviewpage.h \
+  qt/paymentserver.h \
+  qt/peertablemodel.h \
+  qt/peertablesortproxy.h \
+  qt/platformstyle.h \
+  qt/psbtoperationsdialog.h \
+  qt/qrimagewidget.h \
+  qt/qvalidatedlineedit.h \
+  qt/qvaluecombobox.h \
+  qt/receivecoinsdialog.h \
+  qt/receiverequestdialog.h \
+  qt/recentrequeststablemodel.h \
+  qt/rpcconsole.h \
+  qt/sendcoinsdialog.h \
+  qt/sendcoinsentry.h \
+  qt/sendcoinsrecipient.h \
+  qt/signverifymessagedialog.h \
+  qt/splashscreen.h \
+  qt/trafficgraphwidget.h \
+  qt/transactiondesc.h \
+  qt/transactiondescdialog.h \
+  qt/transactionfilterproxy.h \
+  qt/transactionoverviewwidget.h \
+  qt/transactionrecord.h \
+  qt/transactiontablemodel.h \
+  qt/transactionview.h \
+  qt/utilitydialog.h \
+  qt/walletcontroller.h \
+  qt/walletframe.h \
+  qt/walletmodel.h \
+  qt/walletmodeltransaction.h \
+  qt/walletview.h \
+  qt/winshutdownmonitor.h
+
+QT_RES_FONTS = \
+  qt/res/fonts/RobotoMono-Bold.ttf
+
+QT_RES_ICONS = \
+  qt/res/icons/backup.png \
+  qt/res/icons/binary.png \
+  qt/res/icons/chevron.png \
+  qt/res/icons/clock_1.png \
+  qt/res/icons/clock_2.png \
+  qt/res/icons/clock_3.png \
+  qt/res/icons/clock_4.png \
+  qt/res/icons/clock_5.png \
+  qt/res/icons/close.png \
+  qt/res/icons/contacts.png \
+  qt/res/icons/console.png \
+  qt/res/icons/cog.png \
+  qt/res/icons/copy.png \
+  qt/res/icons/cross.png \
+  qt/res/icons/export.png \
+  qt/res/icons/eye.png \
+  qt/res/icons/eye_minus.png \
+  qt/res/icons/eye_plus.png \
+  qt/res/icons/feather.png \
+  qt/res/icons/font_bigger.png \
+  qt/res/icons/font_smaller.png \
+  qt/res/icons/hashtag.png \
+  qt/res/icons/hd_disabled.png \
+  qt/res/icons/hd_enabled.png \
+  qt/res/icons/home.png \
+  qt/res/icons/information.png \
+  qt/res/icons/inout.png \
+  qt/res/icons/input.png \
+  qt/res/icons/key.png \
+  qt/res/icons/link.png \
+  qt/res/icons/load.png \
+  qt/res/icons/lock_closed.png \
+  qt/res/icons/lock_open.png \
+  qt/res/icons/migrate.png \
+  qt/res/icons/minimize.png \
+  qt/res/icons/network.png \
+  qt/res/icons/network_1.png \
+  qt/res/icons/network_2.png \
+  qt/res/icons/network_3.png \
+  qt/res/icons/network_4.png \
+  qt/res/icons/network_disabled.png \
+  qt/res/icons/network_disconnected.png \
+  qt/res/icons/new.png \
+  qt/res/icons/options.png \
+  qt/res/icons/output.png \
+  qt/res/icons/planet.png \
+  qt/res/icons/paste.png \
+  qt/res/icons/plus.png \
+  qt/res/icons/proxy.png \
+  qt/res/icons/qt.png \
+  qt/res/icons/question.png \
+  qt/res/icons/regus-black.png \
+  qt/res/icons/regus.ico \
+  qt/res/icons/regus.png \
+  qt/res/icons/regus_testnet.ico \
+  qt/res/icons/remove.png \
+  qt/res/icons/restore.png \
+  qt/res/icons/shovel.png \
+  qt/res/icons/synced.png \
+  qt/res/icons/trash.png \
+  qt/res/icons/warning.png
+
+REGUS_QT_BASE_CPP = \
+  qt/bantablemodel.cpp \
+  qt/regus.cpp \
+  qt/regusaddressvalidator.cpp \
+  qt/regusamountfield.cpp \
+  qt/regusgui.cpp \
+  qt/regusunits.cpp \
+  qt/clientmodel.cpp \
+  qt/csvmodelwriter.cpp \
+  qt/guiutil.cpp \
+  qt/initexecutor.cpp \
+  qt/intro.cpp \
+  qt/modaloverlay.cpp \
+  qt/networkstyle.cpp \
+  qt/notificator.cpp \
+  qt/optionsdialog.cpp \
+  qt/optionsmodel.cpp \
+  qt/peertablemodel.cpp \
+  qt/peertablesortproxy.cpp \
+  qt/platformstyle.cpp \
+  qt/qvalidatedlineedit.cpp \
+  qt/qvaluecombobox.cpp \
+  qt/rpcconsole.cpp \
+  qt/splashscreen.cpp \
+  qt/trafficgraphwidget.cpp \
+  qt/utilitydialog.cpp
+
+REGUS_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
+
+REGUS_QT_WALLET_CPP = \
+  qt/addressbookpage.cpp \
+  qt/addresstablemodel.cpp \
+  qt/askpassphrasedialog.cpp \
+  qt/coincontroldialog.cpp \
+  qt/coincontroltreewidget.cpp \
+  qt/createwalletdialog.cpp \
+  qt/editaddressdialog.cpp \
+  qt/openuridialog.cpp \
+  qt/overviewpage.cpp \
+  qt/paymentserver.cpp \
+  qt/psbtoperationsdialog.cpp \
+  qt/qrimagewidget.cpp \
+  qt/receivecoinsdialog.cpp \
+  qt/receiverequestdialog.cpp \
+  qt/recentrequeststablemodel.cpp \
+  qt/sendcoinsdialog.cpp \
+  qt/sendcoinsentry.cpp \
+  qt/signverifymessagedialog.cpp \
+  qt/transactiondesc.cpp \
+  qt/transactiondescdialog.cpp \
+  qt/transactionfilterproxy.cpp \
+  qt/transactionoverviewwidget.cpp \
+  qt/transactionrecord.cpp \
+  qt/transactiontablemodel.cpp \
+  qt/transactionview.cpp \
+  qt/walletcontroller.cpp \
+  qt/walletframe.cpp \
+  qt/walletmodel.cpp \
+  qt/walletmodeltransaction.cpp \
+  qt/walletview.cpp
+
+REGUS_QT_CPP = $(REGUS_QT_BASE_CPP)
+if TARGET_WINDOWS
+REGUS_QT_CPP += $(REGUS_QT_WINDOWS_CPP)
+endif
+if ENABLE_WALLET
+REGUS_QT_CPP += $(REGUS_QT_WALLET_CPP)
+endif # ENABLE_WALLET
+
+QT_RES_ANIMATION = $(wildcard $(srcdir)/qt/res/animation/spinner-*.png)
+
+REGUS_QT_RC = qt/res/regus-qt-res.rc
+
+REGUS_QT_INCLUDES = -DQT_NO_KEYWORDS -DQT_USE_QSTRINGBUILDER
+
+qt_libregusqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(REGUS_INCLUDES) $(REGUS_QT_INCLUDES) \
+  $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(QR_CFLAGS) $(BOOST_CPPFLAGS)
+qt_libregusqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libregusqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+
+qt_libregusqt_a_SOURCES = $(REGUS_QT_CPP) $(REGUS_QT_H) $(QT_FORMS_UI) \
+  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(QT_RES_FONTS) $(QT_RES_ICONS) $(QT_RES_ANIMATION)
+if TARGET_DARWIN
+  qt_libregusqt_a_SOURCES += $(REGUS_MM)
+endif
+
+nodist_qt_libregusqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+
+# forms/foo.h -> forms/ui_foo.h
+QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
+
+# Most files will depend on the forms and moc files as includes. Generate them
+# before anything else.
+$(QT_MOC): $(QT_FORMS_H)
+$(qt_libregusqt_a_OBJECTS) $(qt_regus_qt_OBJECTS) $(regus_gui_OBJECTS) : | $(QT_MOC)
+
+# regus-qt and regus-gui binaries #
+regus_qt_cppflags = $(AM_CPPFLAGS) $(REGUS_INCLUDES) $(REGUS_QT_INCLUDES) \
+  $(QT_INCLUDES) $(QR_CFLAGS)
+regus_qt_cxxflags = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+
+regus_qt_sources = qt/main.cpp
+if TARGET_WINDOWS
+  regus_qt_sources += $(REGUS_QT_RC)
+endif
+regus_qt_ldadd = qt/libregusqt.a $(LIBREGUS_NODE)
+if ENABLE_WALLET
+regus_qt_ldadd += $(LIBREGUS_UTIL) $(LIBREGUS_WALLET)
+endif
+if ENABLE_ZMQ
+regus_qt_ldadd += $(LIBREGUS_ZMQ) $(ZMQ_LIBS)
+endif
+regus_qt_ldadd += $(LIBREGUS_CLI) $(LIBREGUS_COMMON) $(LIBREGUS_UTIL) $(LIBREGUS_CONSENSUS) $(LIBREGUS_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+  $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(LIBSECP256K1) \
+  $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(SQLITE_LIBS)
+regus_qt_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+regus_qt_libtoolflags = $(AM_LIBTOOLFLAGS) --tag CXX
+
+qt_regus_qt_CPPFLAGS = $(regus_qt_cppflags)
+qt_regus_qt_CXXFLAGS = $(regus_qt_cxxflags)
+qt_regus_qt_SOURCES = $(regus_qt_sources) init/regus-qt.cpp
+qt_regus_qt_LDADD = $(regus_qt_ldadd)
+qt_regus_qt_LDFLAGS = $(regus_qt_ldflags)
+qt_regus_qt_LIBTOOLFLAGS = $(regus_qt_libtoolflags)
+
+regus_gui_CPPFLAGS = $(regus_qt_cppflags)
+regus_gui_CXXFLAGS = $(regus_qt_cxxflags)
+regus_gui_SOURCES = $(regus_qt_sources) init/regus-gui.cpp
+regus_gui_LDADD = $(regus_qt_ldadd) $(LIBREGUS_IPC) $(LIBREGUS_UTIL) $(LIBMULTIPROCESS_LIBS)
+regus_gui_LDFLAGS = $(regus_qt_ldflags)
+regus_gui_LIBTOOLFLAGS = $(regus_qt_libtoolflags)
+
+#locale/foo.ts -> locale/foo.qm
+QT_QM=$(QT_TS:.ts=.qm)
+
+SECONDARY: $(QT_QM)
+
+$(srcdir)/qt/regusstrings.cpp: FORCE
+	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
+	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" $(PYTHON) ../share/qt/extract_strings_qt.py \
+    $(libregus_node_a_SOURCES) $(libregus_wallet_a_SOURCES) $(libregus_common_a_SOURCES) \
+    $(libregus_zmq_a_SOURCES) $(libregus_consensus_a_SOURCES) $(libregus_util_a_SOURCES) \
+    $(REGUS_QT_BASE_CPP) $(REGUS_QT_WINDOWS_CPP) $(REGUS_QT_WALLET_CPP) $(REGUS_QT_H) $(REGUS_MM)
+
+# The resulted regus_en.xlf source file should follow Transifex requirements.
+# See: https://docs.transifex.com/formats/xliff#how-to-distinguish-between-a-source-file-and-a-translation-file
+translate: $(srcdir)/qt/regusstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(REGUS_QT_BASE_CPP) $(REGUS_QT_WINDOWS_CPP) $(REGUS_QT_WALLET_CPP) $(REGUS_QT_H) $(REGUS_MM)
+	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) -no-obsolete -I $(srcdir) -locations relative $^ -ts $(srcdir)/qt/locale/regus_en.ts
+	@test -n $(LCONVERT) || echo "lconvert is required for updating translations"
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LCONVERT) -drop-translations -o $(srcdir)/qt/locale/regus_en.xlf -i $(srcdir)/qt/locale/regus_en.ts
+	@$(SED) -i.old -e 's|source-language="en" target-language="en"|source-language="en"|' -e '/<target xml:space="preserve"><\/target>/d' $(srcdir)/qt/locale/regus_en.xlf
+	@rm -f $(srcdir)/qt/locale/regus_en.xlf.old
+
+$(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
+	@test -f $(RCC) || (echo "rcc $(RCC) not found, but is required for generating qrc cpp files"; exit 1)
+	@cp -f $< $(@D)/temp_$(<F)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name regus_locale --format-version 1 $(@D)/temp_$(<F) > $@
+	@rm $(@D)/temp_$(<F)
+
+$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(QT_RES_FONTS) $(QT_RES_ICONS) $(QT_RES_ANIMATION)
+	@test -f $(RCC) || (echo "rcc $(RCC) not found, but is required for generating qrc cpp files"; exit 1)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name regus --format-version 1 $< > $@
+
+CLEAN_QT = $(nodist_qt_libregusqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_regus_locale.qrc
+
+CLEANFILES += $(CLEAN_QT)
+
+regus_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libregusqt_a_OBJECTS) $(qt_regus_qt_OBJECTS) qt/regus-qt$(EXEEXT) $(LIBREGUSQT)
+
+regus_qt : qt/regus-qt$(EXEEXT)
+
+APK_LIB_DIR = qt/android/libs/$(ANDROID_ARCH)
+QT_BASE_VERSION = $(lastword $(shell $(MOC) --version))
+QT_BASE_PATH = $(shell find ../depends/sources/ -maxdepth 1 -type f -regex ".*qtbase.*$(QT_BASE_VERSION)\.tar.xz")
+QT_BASE_TLD = $(shell tar tf $(QT_BASE_PATH) --exclude='*/*')
+
+regus_qt_apk: FORCE
+	mkdir -p $(APK_LIB_DIR)
+	cp $(dir $(lastword $(CC)))../sysroot/usr/lib/$(host_alias)/libc++_shared.so $(APK_LIB_DIR)
+	tar xf $(QT_BASE_PATH) -C qt/android/src/ $(QT_BASE_TLD)src/android/jar/src --strip-components=5
+	tar xf $(QT_BASE_PATH) -C qt/android/src/ $(QT_BASE_TLD)src/android/java/src --strip-components=5
+	cp qt/regus-qt $(APK_LIB_DIR)/libregus-qt_$(ANDROID_ARCH).so
+	cd qt/android && gradle wrapper --gradle-version=6.6.1
+	cd qt/android && ./gradlew build
+
+ui_%.h: %.ui
+	@test -f $(UIC) || (echo "uic $(UIC) not found, but is required for generating ui headers"; exit 1)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(UIC) -o $@ $< || (echo "Error creating $@"; false)
+
+%.moc: %.cpp
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES_UNSUPPRESSED) $(MOC_DEFS) $< > $@
+
+moc_%.cpp: %.h
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES_UNSUPPRESSED) $(MOC_DEFS) $< > $@
+
+%.qm: %.ts
+	@test -f $(LRELEASE) || (echo "lrelease $(LRELEASE) not found, but is required for generating translations"; exit 1)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@

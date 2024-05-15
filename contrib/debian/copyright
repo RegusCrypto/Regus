@@ -1,0 +1,11 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Regus
+Upstream-Contact: Regus Developers <development@regus.app>
+ irc://#regus-core-dev@libera.chat
+Source: https://github.com/RegusCrypto/Regus
+
+Files: *
+Copyright: 2009-2024, Regus Core Developers
+License: Expat
+Comment: The Regus Core Developers encompasses all contributors to the
+         project, listed in the release notes or the git log.
