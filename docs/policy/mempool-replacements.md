@@ -15,7 +15,7 @@ other consensus and policy rules, each of the following conditions are met:
    A transaction also signals replaceability if its nVersion field is set to 3.
 
    *Rationale*: See [BIP125
-   explanation](https://github.com/regus/bips/blob/master/bip-0125.mediawiki#motivation).
+   explanation](https://github.com/RegusCrypto/rips/blob/master/rip-0125.mediawiki#motivation).
    Use the (`-mempoolfullrbf`) configuration option to allow transaction replacement without enforcement of the
    opt-in signaling rule.
 
@@ -68,7 +68,7 @@ This set of rules is similar but distinct from BIP125.
 * Opt-in full replace-by-fee (without inherited signaling) honoured in mempool and mining as of
   **v0.12.0** ([PR 6871](https://github.com/RegusCrypto/Regus/pull/6871)).
 
-* [BIP125](https://github.com/regus/bips/blob/master/bip-0125.mediawiki) defined based on
+* [BIP125](https://github.com/RegusCrypto/rips/blob/master/rip-0125.mediawiki) defined based on
   Regus Core implementation.
 
 * The incremental relay feerate used to calculate the required additional fees is distinct from

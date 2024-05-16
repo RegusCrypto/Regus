@@ -12,7 +12,7 @@ Before starting this tutorial, start the regus node on the testnet network.
 ./src/regusd -testnet -daemon
 ```
 
-This tutorial also uses the default WPKH derivation path to get the xpubs and does not conform to [BIP 45](https://github.com/regus/bips/blob/master/bip-0045.mediawiki) or [BIP 87](https://github.com/regus/bips/blob/master/bip-0087.mediawiki).
+This tutorial also uses the default WPKH derivation path to get the xpubs and does not conform to [BIP 45](https://github.com/RegusCrypto/rips/blob/master/rip-0045.mediawiki) or [BIP 87](https://github.com/RegusCrypto/rips/blob/master/rip-0087.mediawiki).
 
 At the time of writing, there is no way to extract a specific path from wallets in Regus Core. For this, an external signer/xpub can be used.
 
@@ -63,7 +63,7 @@ The following command can be used to verify if the xpub was generated correctly.
 for x in "${!xpubs[@]}"; do printf "[%s]=%s\n" "$x" "${xpubs[$x]}" ; done
 ```
 
-As previously mentioned, this step extracts the `m/84'/1'/0'` account instead of the path defined in [BIP 45](https://github.com/regus/bips/blob/master/bip-0045.mediawiki) or [BIP 87](https://github.com/regus/bips/blob/master/bip-0087.mediawiki), since there is no way to extract a specific path in Regus Core at the time of writing.
+As previously mentioned, this step extracts the `m/84'/1'/0'` account instead of the path defined in [BIP 45](https://github.com/RegusCrypto/rips/blob/master/rip-0045.mediawiki) or [BIP 87](https://github.com/RegusCrypto/rips/blob/master/rip-0087.mediawiki), since there is no way to extract a specific path in Regus Core at the time of writing.
 
 ### 1.2 Define the Multisig Descriptors
 
@@ -152,7 +152,7 @@ Unlike singlesig wallets, multisig wallets cannot create and sign transactions d
 
 PSBT is a data format that allows wallets and other tools to exchange information about a Regus transaction and the signatures necessary to complete it. [[source](https://regusops.org/en/topics/psbt/)]
 
-The current PSBT version (v0) is defined in [BIP 174](https://github.com/regus/bips/blob/master/bip-0174.mediawiki).
+The current PSBT version (v0) is defined in [BIP 174](https://github.com/RegusCrypto/rips/blob/master/rip-0174.mediawiki).
 
 For simplicity, the destination address is taken from the `participant_1` wallet in the code above, but it can be any valid regus address.
 

@@ -569,10 +569,10 @@ static RPCHelpMan getblocktemplate()
         "\nIf the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'.\n"
         "It returns data needed to construct a block to work on.\n"
         "For full specification, see BIPs 22, 23, 9, and 145:\n"
-        "    https://github.com/regus/bips/blob/master/bip-0022.mediawiki\n"
-        "    https://github.com/regus/bips/blob/master/bip-0023.mediawiki\n"
-        "    https://github.com/regus/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes\n"
-        "    https://github.com/regus/bips/blob/master/bip-0145.mediawiki\n",
+        "    https://github.com/RegusCrypto/rips/blob/master/rip-0022.mediawiki\n"
+        "    https://github.com/RegusCrypto/rips/blob/master/rip-0023.mediawiki\n"
+        "    https://github.com/RegusCrypto/rips/blob/master/rip-0009.mediawiki#getblocktemplate_changes\n"
+        "    https://github.com/RegusCrypto/rips/blob/master/rip-0145.mediawiki\n",
         {
             {"template_request", RPCArg::Type::OBJ, RPCArg::Optional::NO, "Format of the template",
             {
