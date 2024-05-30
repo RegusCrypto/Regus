@@ -136,12 +136,12 @@
         <translation type="unfinished">Xác nhận mã hóa ví</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">Cảnh báo: Nếu bạn mã hóa ví và mất cụm mật khẩu, bạn sẽ &lt;b&gt;MẤT TẤT CẢ CÁC REGUS&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Bạn có chắc chắn muốn mã hoá ví không?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Bạn có chắc là mình đã nhớ/sao lưu cụm mật khẩu của mình không?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

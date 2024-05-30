@@ -137,12 +137,12 @@ Tanda tangan hanya bisa digunakan dengan tipe alamat 'warisan'</translation>
         <translation type="unfinished">Konfirmasi pengenkripsian dompet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">Peringatan: Jika Anda mengenkripsi dompet Anda dan lupa kata sandi Anda, Anda akan &lt;b&gt;KEHILANGAN SEMUA REGUS ANDA&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Apa Anda yakin ingin mengenkripsi dompet Anda?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Apakah Anda yakin telah mengingat/mencadangkan frasa sandi Anda?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

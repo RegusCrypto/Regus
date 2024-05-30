@@ -156,12 +156,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">वॉलेट एन्क्रिप्शन की पुष्टि करें</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">चेतावनी: यदि आप अपना वॉलेट एन्क्रिप्ट करते हैं और अपना पासफ़्रेज़ खो देते हैं, तो आपअपने सभी बिटकॉइन &lt;b&gt; खो देंगे&lt;/b&gt; !</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">क्या आप वाकई अपने वॉलेट को एन्क्रिप्ट करना चाहते हैं?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">क्या आप निश्चित हैं कि आपने अपना पासफ़्रेज़ याद कर लिया है/उसका बैकअप ले लिया है?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

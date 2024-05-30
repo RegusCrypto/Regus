@@ -156,12 +156,12 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Patvirtinkite piniginės užšifravimą</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">Dėmesio: jei užšifruosite savo piniginę ir pamesite slaptafrazę, jūs&lt;b&gt;PRARASITE VISUS SAVO REGUSUS&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Ar tikrai norite šifruoti savo piniginę?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Ar tikrai prisiminėte slaptafrazę / sukūrėte atsarginę kopiją?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

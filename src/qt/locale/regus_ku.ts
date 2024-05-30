@@ -151,8 +151,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Şîfrekirina cizdên bipejirîne</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Tu bi rastî jî dixwazî cizdanê xwe şîfre bikî?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Ma hûn guman dikin ku we şîfreya xwe bi bîr aniye / piştguh kiriye?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

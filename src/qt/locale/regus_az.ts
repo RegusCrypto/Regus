@@ -152,12 +152,12 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">Pulqabı şifrələməsini təsdiqlə</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">Xəbərdarlıq: Əgər siz pulqabınızı şifrədən çıxarsanız və şifrəli sözü itirmiş olsanız &lt;b&gt;BÜTÜN BİTCOİNLƏRİNİZİ İTİRƏCƏKSİNİZ&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Pulqabınızı şifrədən çıxarmaq istədiyinizə əminsiniz?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Parol sözünüzü yadda saxladığınıza/yedekləndiyinizə əminsiniz?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

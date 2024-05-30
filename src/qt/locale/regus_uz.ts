@@ -151,12 +151,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Hamyon shifrlanishini tasdiqlang</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">Диққат: Агар сиз ҳамёнингизни кодласангиз ва махфий сўзингизни унутсангиз, сиз &lt;b&gt;БАРЧА REGUS ПУЛЛАРИНГИЗНИ ЙЎҚОТАСИЗ&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Haqiqatan ham hamyoningizni shifrlamoqchimisiz?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Parol iborangizni eslab qoldingiz/zaxira nusxasini yaratganingizga ishonchingiz komilmi?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

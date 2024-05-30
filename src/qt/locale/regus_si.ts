@@ -146,12 +146,12 @@
         <translation type="unfinished">පසුම්බි සංකේතනය තහවුරු කරන්න</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
         <translation type="unfinished">අවවාදයයි: ඔබ ඔබේ මුදල් පසුම්බිය සංකේතනය කල පසු ඔබගේ මුරපදය නැති වුවහොත්, ඔබේ  &lt;b&gt;බිට්කොයින් සියල්ලම ඔබට අහිමි වනු ඇත&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">ඔබේ මුදල් පසුම්බිය සංකේතනය කිරීමේ අවශ්‍යතාව තහවුරු කරන්න?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">ඔබට ඔබගේ මුර-වැකිකඩ මතක තබා ඇති/උපස්ථ කර ඇති බව ඔබට විශ්වාසද?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

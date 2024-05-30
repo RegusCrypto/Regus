@@ -150,8 +150,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Konfirmoni enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Jeni te sigurt te enkriptoni portofolin tuaj?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Jeni i sigurt që e keni mbajtur mend/arkivuar frazën tuaj të kalimit?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

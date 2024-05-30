@@ -56,12 +56,12 @@ D'Signatur ass nëmmen mat Adressen vum Typ 'legacy' méiglech.</translation>
 <context>
     <name>AskPassphraseDialog</name>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
-        <translation type="unfinished">Warnung: Wann Dir Är Portemonnaie verschlësselt an Äert Passwort verléiert, &lt;b&gt;DA VERLÉIERT DIR ALLE ÄRE REGUSS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
+        <translation type="unfinished">Warnung: Wann Dir Är Portemonnaie verschlësselt an Äert Passwort verléiert, &lt;b&gt;DA VERLÉIERT DIR ALLE ÄRE REGUS&lt;/b&gt;!</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">Sidd Dir sécher, dass Dir Är Portemonnaie verschlësselen wëllt?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">Sidd Dir sécher datt Dir Är Passwuert erënnert / gebackupt hutt?</translation>
     </message>
     <message>
         <source>Enter the old passphrase and new passphrase for the wallet.</source>

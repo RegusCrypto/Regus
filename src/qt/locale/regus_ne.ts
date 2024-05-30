@@ -158,8 +158,8 @@
         <translation type="unfinished">वालेट इन्क्रिप्सन सुनिश्चित गर्नुहोस</translation>
     </message>
     <message>
-        <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished">के तपाइँ तपाइँको वालेट ईन्क्रिप्ट गर्न निश्चित हुनुहुन्छ?</translation>
+        <source>Are you sure you have remembered/backed up your passphrase?</source>
+        <translation type="unfinished">के तपाइँ निश्चित हुनुहुन्छ कि तपाइँले तपाइँको पासफ्रेज सम्झना/ब्याकअप गर्नुभएको छ?</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

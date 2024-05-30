@@ -263,13 +263,13 @@ Signing is only possible with addresses of the type 'legacy'.</source>
           </context-group>
         </trans-unit>
         <trans-unit id="_msg39">
-          <source xml:space="preserve">Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUSS&lt;/b&gt;!</source>
+          <source xml:space="preserve">Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REGUS&lt;/b&gt;!</source>
           <context-group purpose="location">
             <context context-type="linenumber">108</context>
           </context-group>
         </trans-unit>
         <trans-unit id="_msg40">
-          <source xml:space="preserve">Are you sure you wish to encrypt your wallet?</source>
+          <source xml:space="preserve">Are you sure you have remembered/backed up your passphrase?</source>
           <context-group purpose="location">
             <context context-type="linenumber">108</context>
           </context-group>
