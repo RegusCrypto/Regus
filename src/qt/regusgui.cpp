@@ -998,7 +998,7 @@ void RegusGUI::updateNetworkState()
     case 0: icon = ":/icons/network_disconnected"; break;
     case 1: case 2: case 3: icon = ":/icons/network_1"; break;
     case 4: case 5: case 6: icon = ":/icons/network_2"; break;
-    case 7: case 8: case 9: icon = ":/icons/network_3_"; break;
+    case 7: case 8: case 9: icon = ":/icons/network_3"; break;
     default: icon = ":/icons/network_4"; break;
     }
 
