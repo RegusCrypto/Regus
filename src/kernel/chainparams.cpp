@@ -140,7 +140,11 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0x000289ddd45aff0980b1bebe6cd99988044366b9aca81b7566c17288d8fa5783")}
+                { 0, uint256S("0x000289ddd45aff0980b1bebe6cd99988044366b9aca81b7566c17288d8fa5783")},
+                { 100, uint256S("0x000003d24050cd50e71ce546c6f19a590cfd0e85561e1470e73565b5de8f745d")},
+                { 1000, uint256S("0x0000000000199c0b00a72b71b32f27eebe8aeee40dec26528a5e93696c275f51")},
+                { 5000, uint256S("0x0000000000196bb0d1bf58e3085c8c93b2a3ceeb3846948837e2f4c3c95b842d")},
+                { 10000, uint256S("0x00000000007430bbefde9606e192d8c938bc38fbb862d8454547944c5c0c34ec")}
             }
         };
 
@@ -149,9 +153,9 @@ public:
         };
 
         chainTxData = ChainTxData{
-            .nTime    = 1712232000,
-            .nTxCount = 1,
-            .dTxRate  = 0
+            .nTime    = 1718651702,
+            .nTxCount = 18028,
+            .dTxRate  = 0.01688827096184259
         };
     }
 };
